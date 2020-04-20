@@ -43,58 +43,58 @@ $(function () {
     if (window.location.pathname == '/COMP580_Final/index.html') {
         responsiveVoice.speak("welcome to campus crossing. hit any letter to start the game", "US English Male");
         console.log("here");
-    } else if (window.location.pathname == '/start2ow.html') {
+    } else if (window.location.pathname == '/COMP580_Final/start2ow.html') {
         responsiveVoice.speak(document.getElementById('startStoryH').textContent, "US English Male");
         responsiveVoice.speak(document.getElementById('startStory').textContent, "US English Male");
         responsiveVoice.speak(document.getElementById('startNext').textContent, "US English Male");
-    } else if (window.location.pathname == '/start2owAnim.html') {
+    } else if (window.location.pathname == '/COMP580_Final/start2owAnim.html') {
         setTimeout(function(){
-            window.location.pathname = '/oldwell.html';
+            window.location.pathname = '/COMP580_Final/oldwell.html';
         }, 7000); // this works!
-    }else if (window.location.pathname == '/levelone.html') { 
+    }else if (window.location.pathname == '/COMP580_Final/levelone.html') { 
         levelOneTyping(); 
-    } else if (window.location.pathname == '/leveltwo.html') {
+    } else if (window.location.pathname == '/COMP580_Final/leveltwo.html') {
         levelTwoTyping();
-    } else if (window.location.pathname == '/levelthree.html') {
+    } else if (window.location.pathname == '/COMP580_Final/levelthree.html') {
         levelThreeTyping();
-    } else if (window.location.pathname == '/levelfour.html') {
+    } else if (window.location.pathname == '/COMP580_Final/levelfour.html') {
         levelFourTyping();
-    } else if (window.location.pathname == '/levelfive.html') {  
+    } else if (window.location.pathname == '/COMP580_Final/levelfive.html') {  
         levelFiveTyping();
-    }  else if (window.location.pathname == '/ow2btAnim.html'){
+    }  else if (window.location.pathname == '/COMP580_Final/ow2btAnim.html'){
         setTimeout(function(){
-            window.location.pathname = "/belltower.html"; 
+            window.location.pathname = "/COMP580_Final/belltower.html"; 
         }, 7000);
     } 
    
-    if (window.location.pathname == '/bt2kenanAnim.html'){
+    if (window.location.pathname == '/COMP580_Final/bt2kenanAnim.html'){
         setTimeout(function(){ 
-            window.location.pathname = "/kenan.html";
+            window.location.pathname = "/COMP580_Final/kenan.html";
         }, 7000);
     } 
-    if (window.location.pathname == '/kenan2wtAnim.html'){
+    if (window.location.pathname == '/COMP580_Final/kenan2wtAnim.html'){
         setTimeout(function(){
-            window.location.pathname = '/watertower.html';
+            window.location.pathname = '/COMP580_Final/watertower.html';
         }, 7000);
     }
 
-    if (window.location.pathname == '/wt2domeAnim.html'){
+    if (window.location.pathname == '/COMP580_Final/wt2domeAnim.html'){
         setTimeout(function(){
-            window.location.pathname = '/dome.html'
+            window.location.pathname = '/COMP580_Final/dome.html'
         }, 7000);
     }
     // Speaking on info pages
-    if (window.location.pathname == '/oldwell.html') {   
+    if (window.location.pathname == '/COMP580_Final/oldwell.html') {   
         responsiveVoice.speak("The Old Well", "US English Male");
         responsiveVoice.speak("the old well was built in 1897 and served as the main source of water on campus at the time.", "US English Male"); 
         responsiveVoice.speak("It was given a renovation in 1954, where it has since become the main symbol of the university.", "US English Male");
         responsiveVoice.speak("Press any letter to continue", "US English Male");
-    } else if (window.location.pathname == '/belltower.html') {
+    } else if (window.location.pathname == '/COMP580_Final/belltower.html') {
         responsiveVoice.speak("The Bell Tower", "US English Male");
         responsiveVoice.speak("The Morehead-Patterson Bell Tower is the large functioning bell tower on campus.", "US English Male"); 
         responsiveVoice.speak("It rings every 15 minutes, chimes a unique tune every hour, and plays many of the universities songs during celebrations.", "US English Male");
         responsiveVoice.speak("Press any letter to continue", "US English Male");
-    } else if (window.location.pathname == '/kenan.html'){
+    } else if (window.location.pathname == '/COMP580_Final/kenan.html'){
         responsiveVoice.speak("Kenan Stadium", "US English Male");
         responsiveVoice.speak("Kenan Memorial Football Stadium is home to the U N C Football team.", "US English Male");
         responsiveVoice.speak("The stadium opened in 1927 and held 24,000 fans.", "US English Male");
@@ -102,21 +102,21 @@ $(function () {
         responsiveVoice.speak("Press any letter to continue", "US English Male");
     }
 
-    if (window.location.pathname == '/watertower.html'){
+    if (window.location.pathname == '/COMP580_Final/watertower.html'){
         responsiveVoice.speak("water tower", "US English Male");
         responsiveVoice.speak("the water tower that sits on the souther part of campus was built in 1957 and holds 1 million gallons of water", "US English Male");
         responsiveVoice.speak("after lots of vandalism to the tower, the university had it painted carolina blue for $73,000 in 1981","US English Male");
         responsiveVoice.speak("press any key to continue", "US English Male");
     }
 
-    if (window.location.pathname == '/dome.html'){
+    if (window.location.pathname == '/COMP580_Final/dome.html'){
         responsiveVoice.speak("The Dean E. Smith Center", "US English Male");
         responsiveVoice.speak("the dean dome, as its commonly called, is one of the most famous college basketball arenas in the country", "US English Male");
         responsiveVoice.speak("the tar heels have 7 national players of the year, as well as 6 national championships!", "US English Male");
         responsiveVoice.speak("press any letter to continue", "US English Male");
     }
 
-    if (window.location.pathname == '/gameover.html'){
+    if (window.location.pathname == '/COMP580_Final/gameover.html'){
         responsiveVoice.speak("congratulations! you returned rameses to the dean dome and helped the tar heels pull off the victory", "US English Male");
         responsiveVoice.speak("if you wish to play again, just hit any letter!", "US English Male");
     }   
@@ -124,22 +124,22 @@ $(function () {
 }
 
 function switchPage() {
-    if(window.location.pathname == '/index.html'){  
-        window.location.pathname = '/start2ow.html';  
-    } else if (window.location.pathname == '/start2ow.html'){
-        window.location.pathname = '/start2owAnim.html'
-    } else if (window.location.pathname == '/oldwell.html'){
-        window.location.pathname = '/levelone.html';
-    } else if (window.location.pathname == '/belltower.html'){
-        window.location.pathname = '/leveltwo.html';
-    } else if (window.location.pathname == '/kenan.html'){
-        window.location.pathname = '/levelthree.html'
-    } else if (window.location.pathname == '/watertower.html'){
-        window.location.pathname = '/levelfour.html'
-    } else if (window.location.pathname == '/dome.html'){
-        window.location.pathname = '/levelfive.html'
-    } else if (window.location.pathname == '/gameover.html'){
-        window.location.pathname = '/index.html';
+    if(window.location.pathname == '/COMP580_Final/index.html'){  
+        window.location.pathname = '/COMP580_Final/start2ow.html';  
+    } else if (window.location.pathname == '/COMP580_Final/start2ow.html'){
+        window.location.pathname = '/COMP580_Final/start2owAnim.html'
+    } else if (window.location.pathname == '/COMP580_Final/oldwell.html'){
+        window.location.pathname = '/COMP580_Final/levelone.html';
+    } else if (window.location.pathname == '/COMP580_Final/belltower.html'){
+        window.location.pathname = '/COMP580_Final/leveltwo.html';
+    } else if (window.location.pathname == '/COMP580_Final/kenan.html'){
+        window.location.pathname = '/COMP580_Final/levelthree.html'
+    } else if (window.location.pathname == '/COMP580_Final/watertower.html'){
+        window.location.pathname = '/COMP580_Final/levelfour.html'
+    } else if (window.location.pathname == '/COMP580_Final/dome.html'){
+        window.location.pathname = '/COMP580_Final/levelfive.html'
+    } else if (window.location.pathname == '/COMP580_Final/gameover.html'){
+        window.location.pathname = '/COMP580_Final/index.html';
     }
 }
  
@@ -198,7 +198,7 @@ function levelOneTyping() {
                 if (fullWord === levelOne) {
                     responsiveVoice.speak("good job, you beat level one", "US English Male");
                     setTimeout(function () {
-                        window.location.pathname = '/ow2btAnim.html';
+                        window.location.pathname = '/COMP580_Final/ow2btAnim.html';
                     }, 6500);
                 }
             }
@@ -254,7 +254,7 @@ function levelTwoTyping() {
                 if (fullWord === levelTwo) {
                     responsiveVoice.speak("good job, you beat level two", "US English Male");
                     setTimeout(function () {
-                        window.location.pathname = '/bt2kenanAnim.html';
+                        window.location.pathname = '/COMP580_Final/bt2kenanAnim.html';
                     }, 6500);
                 }
             }
@@ -310,7 +310,7 @@ function levelThreeTyping() {
                 if (fullWord === levelThree) {
                     responsiveVoice.speak("good job, you beat level three", "US English Male");
                     setTimeout(function () {
-                        window.location.pathname = '/kenan2wtAnim.html';
+                        window.location.pathname = '/COMP580_Final/kenan2wtAnim.html';
                     }, 6500);
                 }
             }
@@ -366,7 +366,7 @@ function levelFourTyping() {
                 if (fullWord === levelFour) {
                     responsiveVoice.speak("good job, you beat level four", "US English Male");
                     setTimeout(function () {
-                        window.location.pathname = '/wt2domeAnim.html';
+                        window.location.pathname = '/COMP580_Final/wt2domeAnim.html';
                     }, 6500);
                 }
             }
@@ -422,7 +422,7 @@ function levelFiveTyping() {
                 if (fullWord === levelFive) {
                     responsiveVoice.speak("good job, you beat level five", "US English Male");
                     setTimeout(function () {
-                        window.location.pathname = '/gameover.html';
+                        window.location.pathname = '/COMP580_Final/gameover.html';
                     }, 6500);
                     
                 }
