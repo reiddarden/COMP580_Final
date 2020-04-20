@@ -36,7 +36,7 @@ $(function () {
 })
 function renderSite() { 
     $(document).ready(function () { 
-        
+        console.log("test page load");
     if (window.location.pathname == '/index.html') {
         responsiveVoice.speak("welcome to campus crossing. hit any letter to start the game", "US English Male");
         console.log("here");
