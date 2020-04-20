@@ -6,10 +6,13 @@ function isAlphanumericKey(keycode) {
 }
 
 $(document).keydown(function (e) {
+    console.log("check1");
     if (isAlphanumericKey(e.which)) {
         var myID = "#key-" + String.fromCharCode(e.which);
         $(myID).trigger("mousedown").addClass('active-style');
+        console.log("check2");
         switchPage();
+        console.log("check3");
     }
 });
 
