@@ -41,7 +41,7 @@ $(function () {
      event.preventDefault();
     $(document).ready(function () { 
         console.log("test page load");
-    if (window.location.pathname == '/index.html') {
+    if (window.location.pathname == '/COMP580_Final/index.html') {
         responsiveVoice.speak("welcome to campus crossing. hit any letter to start the game", "US English Male");
         console.log("here");
     } else if (window.location.pathname == '/start2ow.html') {
