@@ -1,0 +1,124 @@
+body {
+    background: lightblue;
+    font-family: 'Bitter', serif;
+}
+
+.keyboardBox {
+    width: 1000px;
+    background: white;
+    border-radius: 10px;
+    margin: auto;
+    color: #13294B;
+    padding-right: 10px;
+    padding-left: 10px;
+
+}
+.keyboardBox img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: 5px solid #13294B;
+    color: #13294B;
+}
+
+.keyboardBox h3 {
+    text-align: center;
+    color: #13294B;
+    padding-bottom: 10px;
+    font-size: 35px;
+    
+}
+.keyboardBox p {
+    text-align: center;
+    padding-bottom: 15px;
+}
+.answerField {
+    padding: 10px;
+}
+
+#levelHeader {
+    color: #13294B;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    display: table;
+    margin: 100px auto;
+    text-align: center;
+  }
+  
+  input[type="text"] {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid gray;
+    display: inline-block;
+    font-size: 20px;
+    margin: 0 5px;
+    width: 1.5rem;
+    text-align: center;
+  }
+  
+  input[type="submit"] {
+    background-color: #00cc66;
+    border: 0;
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  #homeScreen h1 {
+      text-align: center;
+      font-size: 175px;
+      color: #13294B;
+  }
+
+  #homeScreen p{
+      text-align: center;
+      color: #13294B;
+      font-size:60px;
+  }
+   
+  #homeScreen h2 {
+      text-align: center;
+      color: #13294B;
+      font-size: 40px;
+  }
+
+  #gameStart .story {
+      text-align: center;
+      font-size: 50px;
+      color: #13294B;
+  }
+
+  #gameStart #startStoryH {
+      text-align: center;
+      font-size: 100px;
+      color: #13294B;
+  }
+
+  #gameStart #startNext {
+      color: #13294B;
+  }
+
+  #endScreen #endTitle {
+      text-align: center;
+      font-size: 75px;
+      color: #13294B;
+  }
+  
+  #endScreen #endBody{
+      text-align: center;
+      font-size: 25px;
+      color: #13294B;
+  }
+
+
