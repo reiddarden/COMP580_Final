@@ -36,10 +36,10 @@ $(function () {
 })
 function renderSite() { 
     $(document).ready(function () { 
-
-    });
+        
     if (window.location.pathname == '/index.html') {
         responsiveVoice.speak("welcome to campus crossing. hit any letter to start the game", "US English Male");
+        console.log("here");
     } else if (window.location.pathname == '/start2ow.html') {
         responsiveVoice.speak(document.getElementById('startStoryH').textContent, "US English Male");
         responsiveVoice.speak(document.getElementById('startStory').textContent, "US English Male");
@@ -117,6 +117,7 @@ function renderSite() {
         responsiveVoice.speak("congratulations! you returned rameses to the dean dome and helped the tar heels pull off the victory", "US English Male");
         responsiveVoice.speak("if you wish to play again, just hit any letter!", "US English Male");
     }   
+});
 }
 
 function switchPage() {
