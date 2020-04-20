@@ -37,7 +37,8 @@ let levelFive = 'beatduke';
 $(function () {
     renderSite();
 })
-export const renderSite = function() { 
+ function renderSite() { 
+     event.preventDefault();
     $(document).ready(function () { 
         console.log("test page load");
     if (window.location.pathname == '/index.html') {
