@@ -10,9 +10,7 @@ $(document).keydown(function (e) {
     if (isAlphanumericKey(e.which)) {
         var myID = "#key-" + String.fromCharCode(e.which);
         $(myID).trigger("mousedown").addClass('active-style');
-        console.log("check2");
         switchPage();
-        console.log("check3");
     }
 });
 
@@ -34,67 +32,74 @@ let levelThree = 'football';
 let levelFour = 'watertower'; 
 let levelFive = 'beatduke';
 
-$(function () {
+var correct = new Audio("/audio/correct.mp3");
+var incorrect = new Audio("/audio/wrong.mp3");
+var hooves = new Audio("/audio/hooves.mp3");
+
+$(function () { 
     renderSite();
 })
- function renderSite() { 
+function renderSite() { 
     $(document).ready(function () { 
-        console.log("test page load");
-    if (window.location.pathname == '/COMP580_Final/index.html') {
-        responsiveVoice.speak("welcome to campus crossing. hit any letter to start the game", "US English Male");
-        console.log("here");
-    } else if (window.location.pathname == '/COMP580_Final/start2ow.html') {
+    if (window.location.pathname == '/index.html') {
+        responsiveVoice.speak("welcome to campus crossing. hit any letter to start the game", "US English Male"); 
+    } else if (window.location.pathname == '/start2ow.html') {
         responsiveVoice.speak(document.getElementById('startStoryH').textContent, "US English Male");
         responsiveVoice.speak(document.getElementById('startStory').textContent, "US English Male");
         responsiveVoice.speak(document.getElementById('startNext').textContent, "US English Male");
-    } else if (window.location.pathname == '/COMP580_Final/start2owAnim.html') {
+    } else if (window.location.pathname == '/start2owAnim.html') {
+        hooves.play();
         setTimeout(function(){
-            window.location.pathname = '/COMP580_Final/oldwell.html';
+            window.location.pathname = '/oldwell.html';
         }, 7000); // this works!
-    }else if (window.location.pathname == '/COMP580_Final/levelone.html') { 
+    }else if (window.location.pathname == '/levelone.html') { 
         levelOneTyping(); 
-    } else if (window.location.pathname == '/COMP580_Final/leveltwo.html') {
+    } else if (window.location.pathname == '/leveltwo.html') {
         levelTwoTyping();
-    } else if (window.location.pathname == '/COMP580_Final/levelthree.html') {
+    } else if (window.location.pathname == '/levelthree.html') {
         levelThreeTyping();
-    } else if (window.location.pathname == '/COMP580_Final/levelfour.html') {
+    } else if (window.location.pathname == '/levelfour.html') {
         levelFourTyping();
-    } else if (window.location.pathname == '/COMP580_Final/levelfive.html') {  
+    } else if (window.location.pathname == '/levelfive.html') {  
         levelFiveTyping();
-    }  else if (window.location.pathname == '/COMP580_Final/ow2btAnim.html'){
+    }  else if (window.location.pathname == '/ow2btAnim.html'){
+        hooves.play();
         setTimeout(function(){
-            window.location.pathname = "/COMP580_Final/belltower.html"; 
+            window.location.pathname = "/belltower.html"; 
         }, 7000);
     } 
    
-    if (window.location.pathname == '/COMP580_Final/bt2kenanAnim.html'){
+    if (window.location.pathname == '/bt2kenanAnim.html'){
+        hooves.play();
         setTimeout(function(){ 
-            window.location.pathname = "/COMP580_Final/kenan.html";
+            window.location.pathname = "/kenan.html";
         }, 7000);
     } 
-    if (window.location.pathname == '/COMP580_Final/kenan2wtAnim.html'){
+    if (window.location.pathname == '/kenan2wtAnim.html'){
+        hooves.play();
         setTimeout(function(){
-            window.location.pathname = '/COMP580_Final/watertower.html';
+            window.location.pathname = '/watertower.html';
         }, 7000);
     }
 
-    if (window.location.pathname == '/COMP580_Final/wt2domeAnim.html'){
+    if (window.location.pathname == '/wt2domeAnim.html'){
+        hooves.play();
         setTimeout(function(){
-            window.location.pathname = '/COMP580_Final/dome.html'
+            window.location.pathname = '/dome.html'
         }, 7000);
     }
     // Speaking on info pages
-    if (window.location.pathname == '/COMP580_Final/oldwell.html') {   
+    if (window.location.pathname == '/oldwell.html') {   
         responsiveVoice.speak("The Old Well", "US English Male");
         responsiveVoice.speak("the old well was built in 1897 and served as the main source of water on campus at the time.", "US English Male"); 
         responsiveVoice.speak("It was given a renovation in 1954, where it has since become the main symbol of the university.", "US English Male");
         responsiveVoice.speak("Press any letter to continue", "US English Male");
-    } else if (window.location.pathname == '/COMP580_Final/belltower.html') {
+    } else if (window.location.pathname == '/belltower.html') {
         responsiveVoice.speak("The Bell Tower", "US English Male");
         responsiveVoice.speak("The Morehead-Patterson Bell Tower is the large functioning bell tower on campus.", "US English Male"); 
         responsiveVoice.speak("It rings every 15 minutes, chimes a unique tune every hour, and plays many of the universities songs during celebrations.", "US English Male");
         responsiveVoice.speak("Press any letter to continue", "US English Male");
-    } else if (window.location.pathname == '/COMP580_Final/kenan.html'){
+    } else if (window.location.pathname == '/kenan.html'){
         responsiveVoice.speak("Kenan Stadium", "US English Male");
         responsiveVoice.speak("Kenan Memorial Football Stadium is home to the U N C Football team.", "US English Male");
         responsiveVoice.speak("The stadium opened in 1927 and held 24,000 fans.", "US English Male");
@@ -102,21 +107,21 @@ $(function () {
         responsiveVoice.speak("Press any letter to continue", "US English Male");
     }
 
-    if (window.location.pathname == '/COMP580_Final/watertower.html'){
+    if (window.location.pathname == '/watertower.html'){
         responsiveVoice.speak("water tower", "US English Male");
         responsiveVoice.speak("the water tower that sits on the souther part of campus was built in 1957 and holds 1 million gallons of water", "US English Male");
         responsiveVoice.speak("after lots of vandalism to the tower, the university had it painted carolina blue for $73,000 in 1981","US English Male");
         responsiveVoice.speak("press any key to continue", "US English Male");
     }
 
-    if (window.location.pathname == '/COMP580_Final/dome.html'){
+    if (window.location.pathname == '/dome.html'){
         responsiveVoice.speak("The Dean E. Smith Center", "US English Male");
         responsiveVoice.speak("the dean dome, as its commonly called, is one of the most famous college basketball arenas in the country", "US English Male");
         responsiveVoice.speak("the tar heels have 7 national players of the year, as well as 6 national championships!", "US English Male");
         responsiveVoice.speak("press any letter to continue", "US English Male");
     }
 
-    if (window.location.pathname == '/COMP580_Final/gameover.html'){
+    if (window.location.pathname == '/gameover.html'){
         responsiveVoice.speak("congratulations! you returned rameses to the dean dome and helped the tar heels pull off the victory", "US English Male");
         responsiveVoice.speak("if you wish to play again, just hit any letter!", "US English Male");
     }   
@@ -124,29 +129,33 @@ $(function () {
 }
 
 function switchPage() {
-    if(window.location.pathname == '/COMP580_Final/index.html'){  
-        window.location.pathname = '/COMP580_Final/start2ow.html';  
-    } else if (window.location.pathname == '/COMP580_Final/start2ow.html'){
-        window.location.pathname = '/COMP580_Final/start2owAnim.html'
-    } else if (window.location.pathname == '/COMP580_Final/oldwell.html'){
-        window.location.pathname = '/COMP580_Final/levelone.html';
-    } else if (window.location.pathname == '/COMP580_Final/belltower.html'){
-        window.location.pathname = '/COMP580_Final/leveltwo.html';
-    } else if (window.location.pathname == '/COMP580_Final/kenan.html'){
-        window.location.pathname = '/COMP580_Final/levelthree.html'
-    } else if (window.location.pathname == '/COMP580_Final/watertower.html'){
-        window.location.pathname = '/COMP580_Final/levelfour.html'
-    } else if (window.location.pathname == '/COMP580_Final/dome.html'){
-        window.location.pathname = '/COMP580_Final/levelfive.html'
-    } else if (window.location.pathname == '/COMP580_Final/gameover.html'){
-        window.location.pathname = '/COMP580_Final/index.html';
+    if(window.location.pathname == '/index.html'){  
+        window.location.pathname = '/start2ow.html';  
+    } else if (window.location.pathname == '/start2ow.html'){
+        window.location.pathname = '/start2owAnim.html'
+    } else if (window.location.pathname == '/oldwell.html'){
+        window.location.pathname = '/levelone.html';
+    } else if (window.location.pathname == '/belltower.html'){
+        window.location.pathname = '/leveltwo.html';
+    } else if (window.location.pathname == '/kenan.html'){
+        window.location.pathname = '/levelthree.html'
+    } else if (window.location.pathname == '/watertower.html'){
+        window.location.pathname = '/levelfour.html'
+    } else if (window.location.pathname == '/dome.html'){
+        window.location.pathname = '/levelfive.html'
+    } else if (window.location.pathname == '/gameover.html'){
+        window.location.pathname = '/index.html';
     }
 }
  
 
-function speakIntro() {
-    responsiveVoice.speak(document.getElementById("levelHeader").textContent, "US English Male");
+function speakIntro() { 
+    responsiveVoice.speak(document.getElementById("levelHeader").textContent, "US English Male"); 
     responsiveVoice.speak(document.getElementById("levelIntro").textContent, "US English Male");
+
+    if (window.location.pathname == '/levelone.html'){
+        responsiveVoice.speak("game note. in order for sound effects to work, on all typing pages, please wait 2-3 seconds before typing the next letter","US English Male"); 
+    }
 }
 
 function levelOneTyping() {
@@ -163,17 +172,18 @@ function levelOneTyping() {
         if (x == 0) {
             formToAdd = `<input class="inputs" type="text" id="input${x}" maxlength="1" autofocus>`
         } else {
-            formToAdd = `<input class="inputs" type="text" id="input${x}" maxlength="1" onfocus="this.value=''">`
+            formToAdd = `<input class="inputs" type="text" id="input${x}" maxlength="1" onfocus="this.value=''">` 
         }
         $levelOneInput.append(formToAdd);
         x++;
     };
-    levelInputX = 0; // change all other typing functions to include this logic
+    levelInputX = 0; 
     $(".keyboard-key").on({
         mousedown: function () {
             event.preventDefault();
-            responsiveVoice.speak($(this).text().toLowerCase(), "US English Male");
+            responsiveVoice.speak($(this).text().toLowerCase(), "US English Male");  
             if ($(this).text().toLowerCase() == levelOne.charAt(levelInputX)) {
+                correct.play();
                 fullWord += $(this).text().toLowerCase();
                 $("#input" + levelInputX).val($(this).text().toLowerCase());
                 $("#input" + levelInputX).next(".inputs").focus();
@@ -185,20 +195,19 @@ function levelOneTyping() {
                 }
             } else {
                 $("#input" + levelInputX).val($(this).text().toLowerCase());
+                incorrect.play();
             }
 
             if (fullWord.length > levelOne.length) {
                 fullWord = fullWord.substring(0, levelOne.length); 
             }
             if (fullWord.length == levelOne.length) {
-                // May not be able to check by length once we get to last letter
-                // Change where line 86 goes, may need to be reworded and moved into the line 87 if statement
                 console.log(fullWord);
                 responsiveVoice.speak("you typed in: " + fullWord.toLowerCase(), "US English Male");
                 if (fullWord === levelOne) {
                     responsiveVoice.speak("good job, you beat level one", "US English Male");
                     setTimeout(function () {
-                        window.location.pathname = '/COMP580_Final/ow2btAnim.html';
+                        window.location.pathname = '/ow2btAnim.html';
                     }, 6500);
                 }
             }
@@ -225,12 +234,13 @@ function levelTwoTyping() {
         $levelTwoInput.append(formToAdd);
         x++;
     };
-    levelInputX = 0; // change all other typing functions to include this logic
+    levelInputX = 0; 
     $(".keyboard-key").on({
         mousedown: function () {
             event.preventDefault();
             responsiveVoice.speak($(this).text().toLowerCase(), "US English Male");
             if ($(this).text().toLowerCase() == levelTwo.charAt(levelInputX)) {
+                correct.play();
                 fullWord += $(this).text().toLowerCase();
                 $("#input" + levelInputX).val($(this).text().toLowerCase());
                 $("#input" + levelInputX).next(".inputs").focus();
@@ -242,19 +252,18 @@ function levelTwoTyping() {
                 }
             } else {
                 $("#input" + levelInputX).val($(this).text().toLowerCase());
+                incorrect.play();
             }
 
             if (fullWord.length > levelTwo.length) {
                 fullWord = fullWord.substring(0, levelTwo.length);
             }
             if (fullWord.length == levelTwo.length) {
-                // May not be able to check by length once we get to last letter
-                // Change where line 86 goes, may need to be reworded and moved into the line 87 if statement
                 responsiveVoice.speak("you typed in: " + fullWord.toLowerCase(), "US English Male");
                 if (fullWord === levelTwo) {
                     responsiveVoice.speak("good job, you beat level two", "US English Male");
                     setTimeout(function () {
-                        window.location.pathname = '/COMP580_Final/bt2kenanAnim.html';
+                        window.location.pathname = '/bt2kenanAnim.html';
                     }, 6500);
                 }
             }
@@ -281,12 +290,13 @@ function levelThreeTyping() {
         $levelThreeInput.append(formToAdd);
         x++;
     };
-    levelInputX = 0; // change all other typing functions to include this logic
+    levelInputX = 0;
     $(".keyboard-key").on({
         mousedown: function () {
             event.preventDefault();
             responsiveVoice.speak($(this).text().toLowerCase(), "US English Male");
             if ($(this).text().toLowerCase() == levelThree.charAt(levelInputX)) {
+                correct.play();
                 fullWord += $(this).text().toLowerCase();
                 $("#input" + levelInputX).val($(this).text().toLowerCase());
                 $("#input" + levelInputX).next(".inputs").focus();
@@ -298,19 +308,18 @@ function levelThreeTyping() {
                 }
             } else {
                 $("#input" + levelInputX).val($(this).text().toLowerCase()); 
+                incorrect.play();
             }
 
             if (fullWord.length > levelThree.length) {
                 fullWord = fullWord.substring(0, levelThree.length);
             }
             if (fullWord.length == levelThree.length) {
-                // May not be able to check by length once we get to last letter
-                // Change where line 86 goes, may need to be reworded and moved into the line 87 if statement
                 responsiveVoice.speak("you typed in: " + fullWord.toLowerCase(), "US English Male");
                 if (fullWord === levelThree) {
                     responsiveVoice.speak("good job, you beat level three", "US English Male");
                     setTimeout(function () {
-                        window.location.pathname = '/COMP580_Final/kenan2wtAnim.html';
+                        window.location.pathname = '/kenan2wtAnim.html';
                     }, 6500);
                 }
             }
@@ -337,12 +346,13 @@ function levelFourTyping() {
         $levelFourInput.append(formToAdd);
         x++;
     };
-    levelInputX = 0; // change all other typing functions to include this logic
+    levelInputX = 0;
     $(".keyboard-key").on({
         mousedown: function () {
             event.preventDefault();
             responsiveVoice.speak($(this).text().toLowerCase(), "US English Male");
             if ($(this).text().toLowerCase() == levelFour.charAt(levelInputX)) {
+                correct.play();
                 fullWord += $(this).text().toLowerCase();
                 $("#input" + levelInputX).val($(this).text().toLowerCase());
                 $("#input" + levelInputX).next(".inputs").focus();
@@ -354,19 +364,18 @@ function levelFourTyping() {
                 }
             } else {
                 $("#input" + levelInputX).val($(this).text().toLowerCase());
+                incorrect.play();
             }
 
             if (fullWord.length > levelFour.length) {
                 fullWord = fullWord.substring(0, levelFour.length);
             }
             if (fullWord.length == levelFour.length) {
-                // May not be able to check by length once we get to last letter
-                // Change where line 86 goes, may need to be reworded and moved into the line 87 if statement
                 responsiveVoice.speak("you typed in: " + fullWord.toLowerCase(), "US English Male");
                 if (fullWord === levelFour) {
                     responsiveVoice.speak("good job, you beat level four", "US English Male");
                     setTimeout(function () {
-                        window.location.pathname = '/COMP580_Final/wt2domeAnim.html';
+                        window.location.pathname = '/wt2domeAnim.html';
                     }, 6500);
                 }
             }
@@ -388,7 +397,7 @@ function levelFiveTyping() {
         if (x == 0) {
             formToAdd = `<input class="inputs" type="text" id="input${x}" maxlength="1" autofocus>`
         } else {
-            formToAdd = `<input class="inputs" type="text" id="input${x}" maxlength="1" onfocus="this.value=''">`
+            formToAdd = `<input class="inputs" type="text" id="input${x}" maxlength="1" onfocus="this.value=''">` 
         }
         $levelFiveInput.append(formToAdd);
         x++;
@@ -399,6 +408,7 @@ function levelFiveTyping() {
             event.preventDefault();
             responsiveVoice.speak($(this).text().toLowerCase(), "US English Male");
             if ($(this).text().toLowerCase() == levelFive.charAt(levelInputX)) {
+                correct.play();
                 fullWord += $(this).text().toLowerCase();
                 $("#input" + levelInputX).val($(this).text().toLowerCase());
                 $("#input" + levelInputX).next(".inputs").focus();
@@ -410,19 +420,18 @@ function levelFiveTyping() {
                 }
             } else {
                 $("#input" + levelInputX).val($(this).text().toLowerCase());
+                incorrect.play();
             }
 
             if (fullWord.length > levelFive.length) {
                 fullWord = fullWord.substring(0, levelFive.length);
             }
             if (fullWord.length == levelFive.length) {
-                // May not be able to check by length once we get to last letter
-                // Change where line 86 goes, may need to be reworded and moved into the line 87 if statement
                 responsiveVoice.speak("you typed in: " + fullWord.toLowerCase(), "US English Male");
                 if (fullWord === levelFive) {
                     responsiveVoice.speak("good job, you beat level five", "US English Male");
                     setTimeout(function () {
-                        window.location.pathname = '/COMP580_Final/gameover.html';
+                        window.location.pathname = '/gameover.html';
                     }, 6500);
                     
                 }
@@ -430,10 +439,7 @@ function levelFiveTyping() {
         }
     });
 }
-// Still need to address:
-//  Voice direction of where the correct key is in relation to the key pressed 
-//  CSS Notes: Make Keys Bigger
-//  Any accesibility features I can add in 
+
 
 
 
