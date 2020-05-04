@@ -33,7 +33,7 @@ let levelFour = 'watertower';
 let levelFive = 'beatduke';
 
 var correct = new Audio("/COMP580_Final/audio/correct.mp3");
-var incorrect = new Audio("/COMP580_Final/COMP580_Final/audio/wrong.mp3");
+var incorrect = new Audio("/COMP580_Final/audio/wrong.mp3");
 var hooves = new Audio("/COMP580_Final/audio/hooves.mp3");
 
 $(function () { 
